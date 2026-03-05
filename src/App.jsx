@@ -9,7 +9,9 @@ import {
   ExternalLink, 
   MapPin, 
   Mail,
-  ChevronRight
+  ChevronRight,
+  Archive,
+  Download
 } from 'lucide-react';
 
 export default function App() {
@@ -20,7 +22,9 @@ export default function App() {
     drive: "https://drive.google.com/drive/folders/1cJB7lxL-23iv3aGGI8wDI8F3xA6weDtY?usp=sharing",
     wa1: "https://wa.me/6281238643382",
     wa2: "https://wa.me/6281337522119",
-    canva: "https://www.canva.com/design/DAHB68WDEWI/N7HV6cLhPEFt0b9LmfE0NQ/edit?utm_content=DAHB68WDEWI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+    canva: "https://www.canva.com/design/DAHB68WDEWI/N7HV6cLhPEFt0b9LmfE0NQ/edit?utm_content=DAHB68WDEWI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+    docDrive: "https://drive.google.com/drive/folders/1tgXizia4p-YQDoz4q0c7xRIlZe1eqjPI?usp=drive_link",
+    webInstall: "https://vicobali.my.id/"
   };
 
   return (
@@ -159,6 +163,36 @@ export default function App() {
                 </p>
                 <div className="flex items-center text-sm font-semibold text-indigo-600 group-hover:translate-x-1 transition-transform">
                   Buka Presentasi <ChevronRight size={16} />
+                </div>
+              </a>
+
+              {/* Web Install Card */}
+              <a href={links.webInstall} target="_blank" rel="noreferrer" className="group bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-200 transition-all flex flex-col h-full relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
+                <div className="bg-blue-100 text-blue-600 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
+                  <Download size={24} />
+                </div>
+                <h3 className="text-lg font-bold text-slate-800 mb-2">Install Aplikasi (APK)</h3>
+                <p className="text-slate-600 text-sm flex-grow mb-4">
+                  Unduh dan pasang aplikasi VICO langsung ke perangkat Android Anda melalui halaman web ini.
+                </p>
+                <div className="flex items-center text-sm font-semibold text-blue-600 group-hover:translate-x-1 transition-transform">
+                  Buka Web Install <ChevronRight size={16} />
+                </div>
+              </a>
+
+              {/* Documentation Drive Card */}
+              <a href={links.docDrive} target="_blank" rel="noreferrer" className="group bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all flex flex-col h-full relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-amber-50 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
+                <div className="bg-amber-100 text-amber-600 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
+                  <Archive size={24} />
+                </div>
+                <h3 className="text-lg font-bold text-slate-800 mb-2">Dokumentasi & Lampiran</h3>
+                <p className="text-slate-600 text-sm flex-grow mb-4">
+                  Akses folder Google Drive berisi foto dokumentasi, data pendukung, dan lampiran lengkap laporan.
+                </p>
+                <div className="flex items-center text-sm font-semibold text-amber-600 group-hover:translate-x-1 transition-transform">
+                  Buka Folder Lampiran <ChevronRight size={16} />
                 </div>
               </a>
             </div>
