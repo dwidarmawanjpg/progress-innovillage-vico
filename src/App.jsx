@@ -19,7 +19,8 @@ export default function App() {
     instagram: "https://www.instagram.com/sekarjepun.innovate?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     drive: "https://drive.google.com/drive/folders/1cJB7lxL-23iv3aGGI8wDI8F3xA6weDtY?usp=sharing",
     wa1: "https://wa.me/6281238643382",
-    wa2: "https://wa.me/6281337522119"
+    wa2: "https://wa.me/6281337522119",
+    canva: "https://www.canva.com/design/DAHB68WDEWI/N7HV6cLhPEFt0b9LmfE0NQ/edit?utm_content=DAHB68WDEWI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
   };
 
   return (
@@ -146,19 +147,20 @@ export default function App() {
                 </div>
               </a>
 
-              {/* PPTX Card (Pending state) */}
-              <div className="bg-slate-50 p-6 rounded-2xl border border-dashed border-slate-300 flex flex-col h-full relative opacity-80 cursor-not-allowed">
-                <div className="bg-slate-200 text-slate-500 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
+              {/* Canva Presentation Card */}
+              <a href={links.canva} target="_blank" rel="noreferrer" className="group bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-indigo-200 transition-all flex flex-col h-full relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-indigo-50 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
+                <div className="bg-indigo-100 text-indigo-600 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
                   <FileText size={24} />
                 </div>
-                <h3 className="text-lg font-bold text-slate-800 mb-2">Presentasi (PPTX)</h3>
-                <p className="text-slate-500 text-sm flex-grow mb-4">
-                  Dokumen presentasi (*slide deck*) berisi rincian proyek. Link akses sedang dalam persiapan.
+                <h3 className="text-lg font-bold text-slate-800 mb-2">Progress Report (Canva)</h3>
+                <p className="text-slate-600 text-sm flex-grow mb-4">
+                  Dokumen presentasi (*slide deck*) berisi rincian proyek dan laporan progres saat ini.
                 </p>
-                <div className="inline-flex items-center justify-center px-4 py-2 bg-slate-200 text-slate-600 rounded-lg text-sm font-medium w-max">
-                  Menunggu Link Update...
+                <div className="flex items-center text-sm font-semibold text-indigo-600 group-hover:translate-x-1 transition-transform">
+                  Buka Presentasi <ChevronRight size={16} />
                 </div>
-              </div>
+              </a>
             </div>
             
             {/* Project Summary Banner */}
